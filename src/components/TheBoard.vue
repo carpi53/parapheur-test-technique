@@ -36,7 +36,7 @@ const listTask = ref(taskStore.getTasks);
 <template>
   <div>
     <button class="button" @click="toggleModal">Créer une nouvelle carte</button>
-    <Modal :reveal="revealModal" :columns="columns" @response="(response) => toggleModal()"></Modal>
+    <Modal :reveal="revealModal" :columns="columns" @response="() => toggleModal()"></Modal>
     <div class="the-board-container">
       <Column  v-for="column in columns" :key="column.name" :name="column.name" :listTask="listTask.filter((element: Task) => element.column === column.name)"/>
     </div>

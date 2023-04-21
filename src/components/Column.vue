@@ -2,7 +2,7 @@
 import { useTaskStore } from "../stores/tasks";
 import draggable from "vuedraggable";
 import Card from "./Card.vue";
-const props = defineProps({
+defineProps({
   name: String,
   listTask: Array
 });
